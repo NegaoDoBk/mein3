@@ -1,1 +1,112 @@
+/* Cor de fundo do corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6e7e80, #a5c6d5); /* Gradiente suave */
+    color: #333;
+}
+
+/* Caixa principal do jogo */
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    width: 350px; /* Definindo uma largura fixa */
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-10px); /* Efeito de elevação quando o usuário passa o mouse */
+}
+
+/* Título */
+h1 {
+    font-size: 28px;
+    color: #5d6d7e;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Estilo para o input numérico */
+input[type="number"] {
+    padding: 12px;
+    margin: 15px 0;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #4CAF50; /* Mudança de cor ao focar no input */
+    outline: none;
+}
+
+/* Estilo do botão */
+button {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* Efeito de botão flutuante */
+}
+
+button:active {
+    transform: translateY(2px); /* Efeito de pressionar o botão */
+}
+
+/* Resultados de Par ou Ímpar */
+#result {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Mensagem de acerto ou erro */
+#acerto {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 400;
+    color: #555;
+}
+
+#acerto.acertou {
+    color: #28a745; /* Cor verde para acerto */
+}
+
+#acerto.errou {
+    color: #e74c3c; /* Cor vermelha para erro */
+}
+
+/* Transição suave para o resultado */
+#result, #acerto {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#result.visible, #acerto.visible {
+    opacity: 1;
+}
 
